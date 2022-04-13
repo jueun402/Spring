@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <!-- 
+	<bean id="tv" class="polymorphism.ssTV05" >
+		<constructor-arg ref="nb"></constructor-arg>
+	</bean>
+ -->	
+	
+	<!-- setter method injection (참조 전달 = ref)-->
+	<bean id="tv" class="polymorphism.ssTV06" >
+		<property name="speaker" ref = "pd"></property>
+	</bean>
+	
+	<bean id="pd" class="polymorphism.pdSpeaker05" />
+	<bean id="enc" class="polymorphism.encSpeaker05" />
+	<bean id="nb" class="polymorphism.nbSpeaker05" />
+	
+	
+</beans>
