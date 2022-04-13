@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bk01" class="polymorphism.Book07" />
+
+	<!-- 기본타입을 값으로 전달해야 함 (값 전달 = value )-->
+	<bean id="bk02" class="polymorphism.Book07" >
+		<constructor-arg index="0" value = "Java"></constructor-arg>
+		<constructor-arg index="1" value = "hong-gil-dong"></constructor-arg>
+		<constructor-arg index="2" value = "31000"></constructor-arg>
+	</bean> 
+	
+	
+	<!-- setter가 있어야 작동 -->
+	<bean id = "bk03" class="polymorphism.Book07">
+		<property name="title" value = "스프링"></property>
+		<property name="author" value = "계절"></property>
+		<property name="price" value = "365000"></property>
+	</bean>
+	
+</beans>
