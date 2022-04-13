@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+<!-- Spring Container에 관한 내용을 탑재
+component scan : servlet에서 @ 애들 중 spring container에서 활용하는 것들만 넣음 
+com.springbook.view에 있는 애들을 처리 
+view Controller 
+
+
+board Controller 
+loginController
+logoutController 
+
+ -->
+ <context:component-scan base-package="com.springbook.view"></context:component-scan>
+</beans>
